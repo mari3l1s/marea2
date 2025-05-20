@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Ventas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .login-container button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <button onclick="window.location.href='login.html'">Iniciar sesión</button>
+  </div>
+
+  <h1>Gestión de Ventas</h1>
+
+  <form id="ventaForm">
+    <input type="text" id="producto" placeholder="Producto" required>
+    <input type="number" id="cantidad" placeholder="Cantidad" required>
+    <input type="number" id="precio" placeholder="Precio unitario" required>
+    <button type="submit">Agregar Venta</button>
+  </form>
+
+  <table id="tablaVentas">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Total</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+    </tbody>
+  </table>
+
+  <h2>Productos disponibles</h2>
+  <div class="productos">
+    <div class="producto">
+      <h3>Lavadora</h3>
+      <p>Precio: $500</p>
+      <button onclick="agregarDesdeCaja('Lavadora', 1, 500)">Agregar</button>
+    </div>
+    <div class="producto">
+      <h3>Refrigerador</h3>
+      <p>Precio: $800</p>
+      <button onclick="agregarDesdeCaja('Refrigerador', 1, 800)">Agregar</button>
+    </div>
+    <div class="producto">
+      <h3>Microondas</h3>
+      <p>Precio: $150</p>
+      <a href="productos.html">
+        <button onclick="agregarDesdeCaja('Microondas', 1, 150)">Agregar</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

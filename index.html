@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Ventas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+  <div class="top-bar">
+    <nav>
+      <ul>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Nuestros productos</a></li>
+      </ul>
+    </nav>
+    <h1>Marea</h1>
+    <div class="icons">
+      <span>🔍</span>
+      <span>🛒</span>
+    </div>
+  </div>
+</header>
+
+ <section class="hero">
+    <div class="hero-text">
+      <h2>Accesorios Artesanales</h2>
+      <p>Hecho a mano con amor</p>
+    </div>
+    <div class="hero-image">
+      <img src="concha.png" alt="Marea">
+    </div>
+  </section>
+
+   <section class="sobre">
+    <h3>Sobre nosotros</h3>
+    <p>Descubre nuestra colección de accesorios únicos inspirados en la naturaleza y elaborados por manos expertas.</p>
+  </section>
+
+ <section class="productos">
+   <h3>Nuestros productos</h3>
+
+  <form id="ventaForm">
+    <input type="text" id="producto" placeholder="Producto" required>
+    <input type="number" id="cantidad" placeholder="Cantidad" required>
+    <input type="number" id="precio" placeholder="Precio unitario" required>
+    <button type="submit">Agregar Venta</button>
+  </form>
+
+  <table id="tablaVentas">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Total</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+    </tbody>
+  </table>
+
+  <h2>Productos disponibles</h2>
+  <div class="productos">
+    <div class="producto">
+       <img src="lavadora.jpg" alt="Lavadora">
+      <h3>Lavadora</h3>
+      <p>Precio: $500</p>
+      <button class="btn" onclick="agregarDesdeCaja('Lavadora', 1, 500)">Agregar</button>
+    </div>
+
+
+    <div class="producto">
+       <img src="refrigerador.jpg" alt="Refrigerador">
+      <h3>Refrigerador</h3>
+      <p>Precio: $800</p>
+      <button class="btn" onclick="agregarDesdeCaja('Refrigerador', 1, 800)">Agregar</button>
+    </div>
+
+
+    <div class="producto">
+      <img src="microondas.jpg" alt="Microondas">
+      <h3>Microondas</h3>
+            <p>Precio: $150</p>
+        <button class="btn" onclick="agregarDesdeCaja('Microondas', 1, 150)">Agregar</button>
+      
+      
+    </div>
+  </div>
+</section>
+  <script src="script.js"></script>
+   <footer>
+    <p>© 2025 Marea</p>
+  </footer>
+</body>
+</html>
+
